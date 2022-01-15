@@ -2,7 +2,7 @@ const row = document.querySelector('.row')
 async function getData() {
   try{
   row.innerHTML = ''
-  const response = await fetch('/data.json')
+  const response = await fetch('data.json')
   const data = await response.json()
   data.forEach(el => {
     const card = document.createElement('div')
@@ -27,7 +27,7 @@ getData()
 async function showWeekly() {
   try{
   row.innerHTML = ''
-  const response = await fetch('/data.json')
+  const response = await fetch('data.json')
   const data = await response.json()
   data.forEach(el => {
     const card = document.createElement('div')
@@ -51,7 +51,7 @@ async function showWeekly() {
 async function showMonthly() {
   try{
   row.innerHTML = ''
-  const response = await fetch('/data.json')
+  const response = await fetch('data.json')
   
   const data = await response.json()
   data.forEach(el => {
