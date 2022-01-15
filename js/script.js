@@ -43,6 +43,7 @@ async function showWeekly() {
 async function showMonthly() {
   row.innerHTML = ''
   const response = await fetch('/data.json')
+  try{
   const data = await response.json()
   data.forEach(el => {
     const card = document.createElement('div')
@@ -58,4 +59,7 @@ async function showMonthly() {
     </div>`
     row.appendChild(card)
   })
+}catch(err){
+  console.log(err)
+}
 }
