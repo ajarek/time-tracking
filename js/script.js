@@ -1,5 +1,6 @@
 const row = document.querySelector('.row')
 async function getData() {
+  try{
   row.innerHTML = ''
   const response = await fetch('/data.json')
   const data = await response.json()
@@ -17,10 +18,14 @@ async function getData() {
     </div>`
     row.appendChild(card)
   })
+}catch(err){
+  console.log(err)
+}
 }
 getData()
 
 async function showWeekly() {
+  try{
   row.innerHTML = ''
   const response = await fetch('/data.json')
   const data = await response.json()
@@ -38,12 +43,16 @@ async function showWeekly() {
     </div>`
     row.appendChild(card)
   })
+}catch(err){
+  console.log(err)
+}
 }
 
 async function showMonthly() {
+  try{
   row.innerHTML = ''
   const response = await fetch('/data.json')
-  try{
+  
   const data = await response.json()
   data.forEach(el => {
     const card = document.createElement('div')
