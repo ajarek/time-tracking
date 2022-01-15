@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Blue: hsl(195, 74%, 62%);
+    --Red: hsl(348, 100%, 68%);
+    --Lime: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Orange: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--Very-dark-blue);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Pale-blue);
+}
+
+.container {
+    width: 65%;
+    height: 65%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.wrapp {
+    width: 25%;
+    height: 98.1%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: var(--Dark-blue);
+}
+
+.wrapp .user {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1rem 3rem 1rem;
+    background-color: var(--Desaturated-blue);
+    border-radius: 1rem;
+}
+
+.wrapp .user img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.wrapp .user h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+}
+
+.wrapp .date {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+}
+
+.wrapp .date p {
+    cursor: pointer;
+}
+
+.row {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.wrapp1 {
+    width: calc(25% + 1rem);
+    height: calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.wrapp1 .logo {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.wrapp1 .logo img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.wrapp1 .card-text {
+    width: 100%;
+    height: 85%;
+    border-radius: 1rem;
+    background-color: var(--Dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.wrapp1 .card-text .work {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapp1 .card-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--Pale-blue);
+}
+
+.wrapp1 .card-text .last {
+    font-size: 0.8rem;
+    color: var(--Blue);
+}
+
+.lime {
+    background-color: var(--Lime);
+}
+
+.orange {
+    background-color: var(--Light-red);
+}
+
+.red {
+    background-color: var(--Red);
+}
+
+.pale {
+    background-color: var(--Pale-blue);
+}
+
+.violet {
+    background-color: var(--Violet);
+}
+
+.yellow {
+    background-color: var(--Orange);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        height: 100%;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .wrapp {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapp .user {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1rem 0rem;
+    }
+
+    .wrapp .user img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .wrapp .user h2 {
+        font-size: 1rem;
+    }
+
+    .wrapp .date {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .wrapp1 {
+        width: 100%;
+    }
+
+    .wrapp1 .logo img {
+        width: 10%;
+        height: auto;
+    }
+
+    .wrapp1 .card-text .text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
